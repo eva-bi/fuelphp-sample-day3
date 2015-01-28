@@ -20,7 +20,6 @@ Vagrant.configure("2") do |config|
   config.vm.provision :chef_solo do |chef|
     chef.add_recipe "base"
     chef.add_recipe "php-mysql-httpd"
-    chef.add_recipe "php-api"
     chef.add_recipe "composer"
     chef.json = {
       :composer => {
